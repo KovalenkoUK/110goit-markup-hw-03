@@ -114,7 +114,7 @@ font-family: var(--font-family);
     letter-spacing: 0.02em;
     color: var(--slate);
 }
-.feauter, .portfolio{
+.feauter{
     background: var(--cloud);
 }
 .team{
