@@ -20,7 +20,7 @@ a{
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px 0 15px
+    padding: 0 15px 0 15px;
 
 }
 
@@ -32,12 +32,13 @@ a{
     align-items: center;
 }
 
-
+.header-border{
+    border-bottom: 1px solid #e7e9fc;
+}
 .header-menu{
-    display: block;
+    
     display: flex;
     /* width: 72px; */
-    border-bottom: 1px solid #e7e9fc;
 }
 .logo{
     font-family: 'Raleway',sans-serif;
@@ -132,8 +133,7 @@ align-items: center;
     width: 100%; */
     /* justify-content: center;
     display: flex; */
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 188px 0;
     text-align: center;
     
     
@@ -164,7 +164,19 @@ align-items: center;
 .hero-button:hover, .hero-button:focus{
     background-color: #404BBF
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .hidden-list{
     gap: 24px;
     align-items: baseline;
@@ -175,8 +187,8 @@ align-items: center;
 .section-hidden{
     padding: 120px 0;
 }
-.hero-list{
-    width:calc((100% - 3 * 24px) / 4);
+.hidden-list:first-child{
+    flex-basis: calc((100% - 3 * 24px) / 4);
     
 }
 .hero-title{
@@ -187,6 +199,7 @@ align-items: center;
         letter-spacing: 0.02em;
         color: var(--navy-blue);
         margin-bottom: 8px;
+        text-align: center;
 }
 .hero-title-text{
 font-family: var(--font-family);
@@ -195,6 +208,7 @@ font-family: var(--font-family);
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--slate);
+    text-align: center;
 }
 .feauter{
     background: var(--cloud);
@@ -202,6 +216,10 @@ font-family: var(--font-family);
 }
 .feauter-lest{
     margin-right: 24px;
+    gap: 24px;
+}
+.feauter-lest:first-child{
+    width: calc((100% - 72px) / 4);
 }
 .feauter-lest:last-child{
     margin-right: 0px;
@@ -218,14 +236,27 @@ font-family: var(--font-family);
         margin-bottom: 72px;
         /* padding-top: 120px; */
 }
+.portfolio{
+    padding: 120px 0 120px 0;
+}
 .portfolio-item{
     gap: 24px;
     flex-wrap: wrap;
 }
+.portfolio-item:first-child{
+    width: calc((100% - 48px) / 3);
+}
 .team-list,.portfolio-list{
     background: var(--white);
-    width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+.portfolio-item-name{
+    padding: 32px 16px;
+}
+.hero-title{
+    margin-bottom: 8px;
 }
 .team-name{
     padding: 32px 0;
